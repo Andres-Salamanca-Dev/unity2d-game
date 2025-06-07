@@ -1,0 +1,348 @@
+fileFormatVersion: 2
+guid: 6a4ae4d7e589bbf48904f8a64d843569
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7437945629265408845
+    second: tortule-fly_0
+  - first:
+      213: -6865087353329692634
+    second: tortule-fly_1
+  - first:
+      213: 649342521080792715
+    second: tortule-fly_2
+  - first:
+      213: 149121972609848714
+    second: tortule-fly_3
+  - first:
+      213: -4041431713032030391
+    second: tortule-fly_4
+  - first:
+      213: -653987555529995105
+    second: tortule-fly_5
+  - first:
+      213: -1178716177198905399
+    second: tortule-fly_6
+  - first:
+      213: -821185090152401649
+    second: tortule-fly_7
+  - first:
+      213: 6594692460493455659
+    second: tortule-fly_8
+  - first:
+      213: 2922631112122271130
+    second: tortule-fly_9
+  - first:
+      213: 5075300341845534190
+    second: tortule-fly_10
+  - first:
+      213: 1234225724604917831
+    second: tortule-fly_11
+  - first:
+      213: -5031777550230396707
+    second: tortule-fly_12
+  - first:
+      213: -3633718467197479537
+    second: tortule-fly_13
+  - first:
+      213: -8051487035596884538
+    second: tortule-fly_14
+  - first:
+      213: 5185209173157774832
+    second: tortule-fly_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 270
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tortule-fly_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 224
+        width: 310
+        height: 431
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620d1c8cc6f4ab0a0800000000000000
+      internalID: -6865087353329692634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortule-fly_8
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 369
+        width: 291
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b21c8a64add058b50800000000000000
+      internalID: 6594692460493455659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortule-fly_9
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 690
+        width: 300
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 0, z: 0, w: 50}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a958d8ff2854f8820800000000000000
+      internalID: 2922631112122271130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortule-fly_10
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 350
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee52f1455c61f6640800000000000000
+      internalID: 5075300341845534190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortule-fly_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 302
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd06bb14af88b2ab0800000000000000
+      internalID: -5031777550230396707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortule-fly_14
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 41
+        width: 276
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c5b591233f534090800000000000000
+      internalID: -8051487035596884538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tortule-fly_15
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 29
+        width: 267
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f58a24454095f740800000000000000
+      internalID: 5185209173157774832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 390204dfdf4c87c4391cf338a8aaa24d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tortule-fly_0: 7437945629265408845
+      tortule-fly_1: -6865087353329692634
+      tortule-fly_10: 5075300341845534190
+      tortule-fly_11: 1234225724604917831
+      tortule-fly_12: -5031777550230396707
+      tortule-fly_13: -3633718467197479537
+      tortule-fly_14: -8051487035596884538
+      tortule-fly_15: 5185209173157774832
+      tortule-fly_2: 649342521080792715
+      tortule-fly_3: 149121972609848714
+      tortule-fly_4: -4041431713032030391
+      tortule-fly_5: -653987555529995105
+      tortule-fly_6: -1178716177198905399
+      tortule-fly_7: -821185090152401649
+      tortule-fly_8: 6594692460493455659
+      tortule-fly_9: 2922631112122271130
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

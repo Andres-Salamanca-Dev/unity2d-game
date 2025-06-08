@@ -1,83 +1,70 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Seagull : MonoBehaviour
 {
-    [SerializeField] private GameObject destroyEffect;
-    [SerializeField] private AudioClip destroySound;
-    [SerializeField] private float graceTime = 0.5f;
-    [SerializeField] private float minImpactForce = 0.5f;
+    [Header("Efectos")]
+    [SerializeField] GameObject destroyEffect;
+    [SerializeField] AudioClip destroySound;
 
-    private float startTime;
-    private bool isGrounded = false;
+    [Header("Parámetros de muerte")]
+    [Tooltip("Tiempo de gracia tras aparecer")]
+    [SerializeField] float graceTime = 0.5f;
 
-    void Start()
+    [Tooltip("Fuerza mínima para morir si no viene desde arriba")]
+    [SerializeField] float minImpactForce = 0.8f;
+
+    [Tooltip("Cuánto más alto debe venir el atacante")]
+    [SerializeField] float alturaUmbral = 0.15f;
+
+    float startTime;
+
+    void Start() => startTime = Time.time;
+
+    void OnCollisionEnter2D(Collision2D col)
     {
-        startTime = Time.time;
-    }
+        if (Time.time - startTime < graceTime) return;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-    
-        if (Time.time - startTime < graceTime)
+        // magnitud del impactoo
+        float Fimpacto = col.relativeVelocity.magnitude;
+
+        // posicin vertical del atacante vs gaviot
+        float alturaAtacante = col.transform.position.y;
+        bool vieneDeArriba = alturaAtacante > transform.position.y + alturaUmbral;
+
+        if (col.collider.CompareTag("Player"))
         {
-            return;
-        }
-
-        ContactPoint2D contact = collision.GetContact(0);
-        Vector2 impactDirection = contact.normal;
-
-        if (impactDirection.y < -0.8f)
-        {
-            isGrounded = true;
-            return;
-        }
-
-        float impactForce = collision.relativeVelocity.magnitude;
-
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log($"Seagull destruido por Player");
-            DestroySeagull();
-            return;
-        }
-
-        if (collision.gameObject.CompareTag("Box"))
-        {
-            Rigidbody2D boxRb = collision.gameObject.GetComponent<Rigidbody2D>();
-
-            // Si la caja est� cayendo desde arriba
-            if (boxRb != null && collision.transform.position.y > transform.position.y + 0.2f)
+            if (vieneDeArriba || Fimpacto > minImpactForce)
             {
-                Debug.Log($"Seagull destruido por caja desde arriba");
-                DestroySeagull();
-                return;
+                Debug.Log("Seagull destruida por tortuga");
+                Morir();
             }
+            return;
         }
 
-        if (impactForce > minImpactForce)
+        // -------- GOLPE DE UNA CAJA --------
+        if (col.collider.CompareTag("Box"))
         {
-            Debug.Log($"Seagull destruido por: {collision.gameObject.name} con fuerza: {impactForce}");
-            DestroySeagull();
+            if (vieneDeArriba)
+            {
+                Debug.Log("Seagull destruida por caja");
+                Morir();
+            }
+            return;
+        }
+
+        // -------- CUALQUIER OTRO OBJETO --------
+        if (Fimpacto > minImpactForce)
+        {
+            Debug.Log($"Seagull destruida por {col.gameObject.name} con F={Fimpacto:F2}");
+            Morir();
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+ 
+    void Morir()
     {
-        isGrounded = false;
-    }
-
-    private void DestroySeagull()
-    {
-        if (destroyEffect != null)
-        {
-            Instantiate(destroyEffect, transform.position, Quaternion.identity);
-        }
-
-        if (destroySound != null)
-        {
-            AudioSource.PlayClipAtPoint(destroySound, transform.position);
-        }
-
+        if (destroyEffect) Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        if (destroySound) AudioSource.PlayClipAtPoint(destroySound, transform.position);
         Destroy(gameObject);
     }
 }

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraSC : MonoBehaviour
 {
@@ -8,10 +8,10 @@ public class CameraSC : MonoBehaviour
     [SerializeField] private float smoothSpeed = 0.125f;
     [SerializeField] private float maxXPosition = 20f;
 
-    private float GetCameraRightEdge()
+    float GetCameraRightEdge()
     {
-        float cameraHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
-        return transform.position.x + cameraHalfWidth;
+        float half = Camera.main.orthographicSize * Camera.main.aspect;
+        return transform.position.x + half;
     }
 
     public void ResetCamera()
@@ -27,22 +27,21 @@ public class CameraSC : MonoBehaviour
 
     void LateUpdate()
     {
-        if (tortuga != null)
+        if (tortuga == null) return;
+
+        Vector3 cur = transform.position;
+
+        if (tortuga.transform.position.x > GetCameraRightEdge())
         {
-            Vector3 currentPosition = transform.position;
+            tortuga.GetComponent<Turtle>().ForceReset();
+            return;
+        }
 
-            if (tortuga.transform.position.x > GetCameraRightEdge())
-            {
-                tortuga.GetComponent<NewEmptyCSharpScript>().ForceReset();
-                return;
-            }
-
-            if (tortuga.transform.position.x > initialX)
-            {
-                float targetX = Mathf.Min(tortuga.transform.position.x, maxXPosition);
-                float newX = Mathf.Lerp(currentPosition.x, targetX, smoothSpeed);
-                transform.position = new Vector3(newX, currentPosition.y, currentPosition.z);
-            }
+        if (tortuga.transform.position.x > initialX)
+        {
+            float targetX = Mathf.Min(tortuga.transform.position.x, maxXPosition);
+            float newX = Mathf.Lerp(cur.x, targetX, smoothSpeed);
+            transform.position = new Vector3(newX, cur.y, cur.z);
         }
     }
 }
